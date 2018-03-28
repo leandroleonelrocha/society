@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('template');
 });
+
+//Route::get('validate', 'LoginController@validate');
+
+Route::post('/profile', 'LoginController@validar')->name('profile');
+
+Route::get('/deshboard', 'LoginController@deshboard')->name('deshboard');
