@@ -2,12 +2,17 @@
 @section('header')
   @include('template.logout')  
 @endsection
+
+@section('nav')
+  @include('template.nav')  
+@endsection
+
 @section('content')
 <div class="container">
         <div class="row">
           <div class="col-md-8">
             <div class="profile">
-              <h1 class="page-header">{{Auth::user()->email}}</h1>
+              <h1 class="page-header"></h1>
               <div class="row">
                 <div class="col-md-4">
                   <img src="img/user.png" class="img-thumbnail" alt="">

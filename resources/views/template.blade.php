@@ -18,7 +18,7 @@
   <body>
 
     @yield('header')
-    
+    @yield('nav')
 
     <section>
     @yield('content')

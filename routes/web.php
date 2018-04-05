@@ -18,8 +18,12 @@ Route::get('/', function () {
 //Route::get('validate', 'LoginController@validate');
 
 
-
 Route::post('/profile', 'LoginController@validar')->name('profile');
 Route::get('/deshboard', 'LoginController@deshboard')->name('deshboard');
 Route::post('/logout', 'LoginController@logout')->name('logout');
 
+require(__Dir__ . '/Routes/InicioRoute.php');
+require(__Dir__ . '/Routes/AmigosRoute.php');
+require(__Dir__ . '/Routes/FotosRoute.php');
+require(__Dir__ . '/Routes/PerfilRoute.php');
+require(__Dir__ . '/Routes/GruposRoute.php');
