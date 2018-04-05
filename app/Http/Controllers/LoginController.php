@@ -10,7 +10,7 @@ use App\User;
 
 class LoginController extends Controller
 {
-	 public function validar(Request $request){
+	public function validar(Request $request){
 	 	
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             // Authentication passed...
@@ -19,14 +19,20 @@ class LoginController extends Controller
 
             return redirect()->intended('deshboard');
         }else{
-        	return 'asd';
+        	return redirect()->route('login');
         }
     }
 
     public function deshboard(){
 
-    	dd(Auth::user());
+
     	return view('deshboard');
     }
 
+    public function logout(){
+       
+        Auth::logout();
+        return redirect()->route('login');
+
+    }
 }

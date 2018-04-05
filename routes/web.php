@@ -12,11 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('template');
-});
+    return view('users.login');
+})->name('login');
 
 //Route::get('validate', 'LoginController@validate');
 
-Route::post('/profile', 'LoginController@validar')->name('profile');
 
+
+Route::post('/profile', 'LoginController@validar')->name('profile');
 Route::get('/deshboard', 'LoginController@deshboard')->name('deshboard');
+Route::post('/logout', 'LoginController@logout')->name('logout');
+
